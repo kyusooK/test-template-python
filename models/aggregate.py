@@ -32,6 +32,6 @@ window.$HandleBars.registerHelper('createLeftMustache', function () {
 });
 window.$HandleBars.registerHelper('createRightMustache', function () {
     // Handlebars에서 f-string의 중괄호를 이스케이프하기 위한 헬퍼 함수
-    return '{'
+    return '}'
 });
 </function> 
