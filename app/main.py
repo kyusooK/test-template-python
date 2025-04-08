@@ -51,7 +51,7 @@ def list_{{namePlural}}(db: Session):
     
     print("\n{{namePascalCase}} in the database:")
     for {{nameCamelCase}} in {{namePlural}}:
-        print(f"{{#aggregateRoot.fieldDescriptors}}{{#if isKey}}{{namePascalCase}}: {{{../nameCamelCase}}.{{nameCamelCase}}}{{/if}}{{/aggregateRoot.fieldDescriptors}}{{#getDisplayFields aggregateRoot.fieldDescriptors}}, {{namePascalCase}}: {{{../nameCamelCase}}.{{nameCamelCase}}}{{/getDisplayFields}}")
+        print(f"{{#aggregateRoot.fieldDescriptors}}{{#if isKey}}{{namePascalCase}}: {{../nameCamelCase}}.{{nameCamelCase}}{{/if}}{{/aggregateRoot.fieldDescriptors}}{{#getDisplayFields aggregateRoot.fieldDescriptors}}, {{namePascalCase}}: {{{../nameCamelCase}}.{{nameCamelCase}}}{{/getDisplayFields}}")
 {{/aggregates}}
 
 def main():
