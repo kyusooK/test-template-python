@@ -1,0 +1,21 @@
+forEach: BoundedContext
+fileName: requirements.txt
+path: {{name}}
+---
+sqlalchemy==2.0.25
+alembic==1.13.1
+psycopg2-binary==2.9.9
+python-dotenv==1.0.0
+{{#checkRestApi}}
+fastapi==0.110.0
+uvicorn==0.28.0
+{{/checkRestApi}}
+
+<function>
+window.$HandleBars.registerHelper('checkRestApi', function(options) {
+    if(this.preferredPlatform && this.preferredPlatform.includes('RestAPI')) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
+</function> 
